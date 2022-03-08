@@ -22,7 +22,6 @@ set( SOURCES
   action.cpp
   component.cpp
   game.cpp
-  main.cpp
   entity.cpp
   munificent_ecs.cpp
   ecs.cpp
@@ -31,7 +30,7 @@ set( SOURCES
   )
 
 
-add_executable( ${PROJECT_NAME} ${SOURCES} )
+add_library( ${PROJECT_NAME} SHARED ${SOURCES} )
 
 target_include_directories( ${PROJECT_NAME} PRIVATE
   ${CMAKE_SOURCE_DIR}/src
