@@ -48,6 +48,9 @@ namespace ecs
     pointer alternate;
   };
 
+  //
+  // Examples
+  //
   struct move_action : public action
   {
     move_action( vec2i v ) : velocity( v ) {}
