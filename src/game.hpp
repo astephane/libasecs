@@ -39,18 +39,18 @@ namespace ecs
     game( hero::input_pointer && );
 
 #if 0
-    void loop()
-    {
+    void loop() {
+
       double elapsed = 1.0 / 25.0;
 
       std::for_each(
-	std::begin( actors ),
-	std::end( actors ),
-	[ elapsed ]( auto * a ) {
-	  assert( a );
-	  a->update( elapsed );
-	}
-	);
+        std::begin( actors ),
+        std::end( actors ),
+        [ elapsed ]( auto * a ) {
+          assert( a );
+          a->update( elapsed );
+        }
+        );
     }
 #endif
 
