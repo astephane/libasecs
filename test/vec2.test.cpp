@@ -2,11 +2,11 @@
 
 #include "vec2.hpp"
 
-SCENARIO( "Zero osrl::vec2i", "" )
+SCENARIO( "Zero ecs::vec2i", "" )
 {
-  GIVEN( "A an uninitialized osrl::vec2i" )
+  GIVEN( "A an uninitialized ecs::vec2i" )
   {
-    osrl::vec2i u;
+    ecs::vec2i u;
 
     THEN( "All components must be zero" )
     {
@@ -17,7 +17,7 @@ SCENARIO( "Zero osrl::vec2i", "" )
       REQUIRE( u.x == 0 );
       REQUIRE( u.y == 0 );
 
-      AND_THEN( "osrl::vec2i:is_zero() must be true" )
+      AND_THEN( "ecs::vec2i:is_zero() must be true" )
       {
 	CAPTURE( u );
 	CAPTURE( u.x );
@@ -30,11 +30,11 @@ SCENARIO( "Zero osrl::vec2i", "" )
   }
 }
 
-SCENARIO( "Construction of osrl::vec2i", "" )
+SCENARIO( "Construction of ecs::vec2i", "" )
 {
-  GIVEN( "An initialized osrl::vec2i" )
+  GIVEN( "An initialized ecs::vec2i" )
   {
-    osrl::vec2i u( -1, +2 );
+    ecs::vec2i u( -1, +2 );
 
     THEN( "All components must match their initialization value" )
     {
@@ -45,7 +45,7 @@ SCENARIO( "Construction of osrl::vec2i", "" )
       REQUIRE( u.x == -1 );
       REQUIRE( u.y == +2 );
 
-      AND_THEN( "osrl::vec2i:is_zero() must be false" )
+      AND_THEN( "ecs::vec2i:is_zero() must be false" )
       {
 	CAPTURE( u );
 	CAPTURE( u.x );
@@ -58,19 +58,19 @@ SCENARIO( "Construction of osrl::vec2i", "" )
   }
 }
 
-SCENARIO( "Addition of osrl::vec2i", "" )
+SCENARIO( "Addition of ecs::vec2i", "" )
 {
   GIVEN( "A an uninitialized vec2i" )
   {
-    osrl::vec2i u;
+    ecs::vec2i u;
 
-    AND_GIVEN( "Another non-zero osrl::vec2i" )
+    AND_GIVEN( "Another non-zero ecs::vec2i" )
     {
-      osrl::vec2i v( -1, +2 );
+      ecs::vec2i v( -1, +2 );
 
-      AND_GIVEN( "The addition of both osrl::vec2i" )
+      AND_GIVEN( "The addition of both ecs::vec2i" )
       {
-	osrl::vec2i w = u + v;
+	ecs::vec2i w = u + v;
 
 	THEN( "" )
 	{
@@ -97,15 +97,15 @@ SCENARIO( "Addition of osrl::vec2i", "" )
 }
 
 
-SCENARIO( "Negation of osrl::vec2i", "" )
+SCENARIO( "Negation of ecs::vec2i", "" )
 {
-  GIVEN( "An uninitialized osrl::vec2i" )
+  GIVEN( "An uninitialized ecs::vec2i" )
   {
-    osrl::vec2i u;
+    ecs::vec2i u;
 
     AND_GIVEN( "Its negation" )
     {
-      osrl::vec2i v = -u;
+      ecs::vec2i v = -u;
 
       THEN( "" )
       {
@@ -129,13 +129,13 @@ SCENARIO( "Negation of osrl::vec2i", "" )
     }
   }
 
-  GIVEN( "An initialized osrl::vec2i" )
+  GIVEN( "An initialized ecs::vec2i" )
   {
-    osrl::vec2i u( -1, +2 );
+    ecs::vec2i u( -1, +2 );
 
     AND_GIVEN( "Its negation" )
     {
-      osrl::vec2i v = -u;
+      ecs::vec2i v = -u;
 
       THEN( "" )
       {

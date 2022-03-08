@@ -1,20 +1,20 @@
 //
 // Copyright 2020 Stéphane ALBERT
 //
-// This file is part of OSRogueL (osrl).
+// This file is part of libasecs.
 //
-// OSRogueL (osrl) is free software: you can redistribute it and/or modify
+// libasecs is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// OSRogueL (osrl) is distributed in the hope that it will be useful,
+// libasecs is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the
 // GNU Affero General Public License for more details.
 //
 // You should have received a copy of the GNU Affero General Public License
-// along with OSRogueL (osrl).	If not, see <https://www.gnu.org/licenses/>.
+// along with libasecs.	If not, see <https://www.gnu.org/licenses/>.
 //
 
 #pragma once
@@ -30,7 +30,7 @@
 #include <vector>
 
 
-namespace osrl
+namespace ecs
 {
   struct entity
   {
@@ -43,7 +43,7 @@ namespace osrl
   struct system
   {
   };
-} // osrl
+} // ecs
 
 
 //
@@ -64,7 +64,7 @@ namespace munificent::ecs
   //	(noun).
   //
 
-  struct capability : public osrl::component
+  struct capability : public ::ecs::component
   {
   };
 
@@ -134,7 +134,7 @@ namespace munificent::ecs
   {
   };
 
-  struct item : public osrl::component
+  struct item : public ::ecs::component
   {
     attack melee;
     attack ranged;
@@ -207,7 +207,7 @@ namespace munificent::ecs
   };
 
 // function-object (lambda + captures)
-  struct actor : public osrl::entity
+  struct actor : public ::ecs::entity
   {
     int x;
     int y;

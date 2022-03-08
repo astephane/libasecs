@@ -1,26 +1,26 @@
 //
 // Copyright 2020 Stéphane ALBERT
 //
-// This file is part of OSRogueL (osrl).
+// This file is part of libasecs.
 //
-// OSRogueL (osrl) is free software: you can redistribute it and/or modify
+// libasecs is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// OSRogueL (osrl) is distributed in the hope that it will be useful,
+// libasecs is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Affero General Public License for more details.
 //
 // You should have received a copy of the GNU Affero General Public License
-// along with OSRogueL (osrl).  If not, see <https://www.gnu.org/licenses/>.
+// along with libasecs.  If not, see <https://www.gnu.org/licenses/>.
 //
 
 #pragma once
 
-#ifndef OSRL_CONFIG
-#define OSRL_CONFIG 0x54470000F233C0D3
+#ifndef ECS_CONFIG
+#define ECS_CONFIG 0x54470000F233C0D3
 
 
 #define unused( x )
@@ -34,19 +34,19 @@
 #endif // NDEBUG
 
 
-#define OSRL_LICENCE "AGPLv3"
+#define ECS_LICENCE "AGPLv3"
 
-#define OSRL_VERSION_STRING "@osrl_VERSION@"
+#define ECS_VERSION_STRING "@ecs_VERSION@"
 
-#define OSRL_VERSION @osrl_VERSION@
+#define ECS_VERSION @ecs_VERSION@
 
-#define OSRL_VERSION_MAJOR @osrl_VERSION_MAJOR@
-#define OSRL_VERSION_MINOR @osrl_VERSION_MINOR@
-#define OSRL_VERSION_PATCH @osrl_VERSION_PATCH@
-#define OSRL_VERSION_TWEAK @osrl_VERSION_TWEAK@
+#define ECS_VERSION_MAJOR @ecs_VERSION_MAJOR@
+#define ECS_VERSION_MINOR @ecs_VERSION_MINOR@
+#define ECS_VERSION_PATCH @ecs_VERSION_PATCH@
+#define ECS_VERSION_TWEAK @ecs_VERSION_TWEAK@
 
 // #if __cplusplus>=202002L
 // #elif __cplusplus>=201703L
 // #endif // __cplusplus
 
-#endif // OSRL_CONFIG
+#endif // ECS_CONFIG

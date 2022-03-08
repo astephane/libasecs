@@ -1,29 +1,29 @@
 //
 // Copyright 2020 Stéphane ALBERT
 //
-// This file is part of OSRogueL (osrl).
+// This file is part of libasecs.
 //
-// OSRogueL (osrl) is free software: you can redistribute it and/or modify
+// libasecs is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// OSRogueL (osrl) is distributed in the hope that it will be useful,
+// libasecs is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Affero General Public License for more details.
 //
 // You should have received a copy of the GNU Affero General Public License
-// along with OSRogueL (osrl).  If not, see <https://www.gnu.org/licenses/>.
+// along with libasecs.  If not, see <https://www.gnu.org/licenses/>.
 //
 
-#include "osrl_config.hpp"
+#include "asecs_config.hpp"
 
 
 #include "action.hpp"
 #include "game.hpp"
-#include "memory.hpp"
-#include "pp.hpp"
+// #include "memory.hpp"
+// #include "pp.hpp"
 #include "vec2.hpp"
 
 #include <algorithm>
@@ -53,10 +53,10 @@ namespace
   }
 } // namespsace
 
-namespace osrl::tcode
+namespace ecs::tcode
 {
 
-  struct human_component : public osrl::human_component
+  struct human_component : public ecs::human_component
   {
     void update( actor & actor_ )
     {
@@ -97,15 +97,15 @@ namespace osrl::tcode
 int
 libtcod_main( int unused( argc ), char * unused( argv )[] )
 {
-  TCODConsole::initRoot( width(), height(), "\"Blackhawk\" OSRogueL " OSRL_VERSION_STRING, false );
+  TCODConsole::initRoot( width(), height(), "\"Blackhawk\" OSRogueL " ECS_VERSION_STRING, false );
 
   // TCODConsole::root->setBackgroundFlag( TCOD_BKGND_COLOR_BURN );
 
-  auto human_component = std::make_shared< osrl::tcode::human_component >();
+  auto human_component = std::make_shared< ecs::tcode::human_component >();
 
-  osrl::game game( human_component );
+  ecs::game game( human_component );
 
-  // osrl::vec2< int > pos(
+  // ecs::vec2< int > pos(
   //   width() / 2,
   //   height() / 2
   //   );
@@ -171,7 +171,7 @@ int
 main( int argc, char * argv[] )
 {
   std::cout
-    << "Welcome to OSRogueL version " OSRL_VERSION_STRING " distributed under the terms of the " OSRL_LICENCE
+    << "Welcome to OSRogueL version " ECS_VERSION_STRING " distributed under the terms of the " ECS_LICENCE
     << std::endl;
 
 #if USE_LIBTCOD
