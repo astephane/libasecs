@@ -63,6 +63,9 @@ namespace ecs
   };
 
 
+  //
+  // Examples
+  //
   struct character : public actor
   {
     character( input_pointer && in_ ) : actor( std::move( in_ ) ) {}
