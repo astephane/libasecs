@@ -33,9 +33,11 @@
 # define unused_release( symbol ) symbol
 #endif // NDEBUG
 
+// see #cmakesefine
 
 #define ECS_LICENCE "AGPLv3"
 
+#define ECS_PROJECT_STRING "@PROJECT_NAME"
 #define ECS_VERSION_STRING "@ecs_VERSION@"
 
 #define ECS_VERSION @ecs_VERSION@
