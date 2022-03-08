@@ -171,7 +171,7 @@ int
 main( int argc, char * argv[] )
 {
   std::cout
-    << "Welcome to OSRogueL version " ECS_VERSION_STRING " distributed under the terms of the " ECS_LICENCE
+      << "Welcome to " ECS_PROJECT_STRING " version " ECS_VERSION_STRING " distributed under the terms of the " ECS_LICENCE
     << std::endl;
 
 #if USE_LIBTCOD
